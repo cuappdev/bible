@@ -24,7 +24,7 @@ Use rebase to do whatever you please to make the history most understandable and
 
 ##Workflow##
 1. Get assigned issue on Github
-2. git checkout -b [your-name]/[feature] (Create feature branch)
+2. git checkout -b [your-name]/[feature] - (Create feature branch)
 3. Work on feature
 4. Prep for PR
 
