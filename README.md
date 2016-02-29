@@ -51,6 +51,6 @@ Use rebase to do whatever you please to make the history most understandable and
 - `git push origin master`
 
 #Escape Hatches#
-- `git rebase -abort` while rebasing
+- `git rebase --abort` while rebasing
 - `git reset --hard ORIG-HEAD` after rebasing
 - `git reflog` if you accidentally delete something you don’t mean to
