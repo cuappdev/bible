@@ -1,5 +1,5 @@
-#The CUAppDev Git-Bible#
-##Pre-Pull Request##
+# The CUAppDev Git-Bible
+## Pre-Pull Request
 
 Use rebase to do whatever you please to make the history most understandable and clear:
 
@@ -11,18 +11,18 @@ Use rebase to do whatever you please to make the history most understandable and
 - Alter commit messages
 - Force push changes to your branch (the only time force push is okay)
 
-##Post-Pull Request##
+## Post-Pull Request
 - Treat open PR as amend-only, rebasing and force pushing will mutate/destroy commentary history
 - Commit and push to your branch to address feedback from code review
 - Link commit SHA in Github comments so your reviewer can jump directly to the commit where you fixed whatever was brought up
 
-##Pre-Merge##
+## Pre-Merge
 - Do one large rebase to bring your branch up-to-date with master
 - Do not push rebased version — keeps commentary history
 - Do explicitly merge with master (using —no-ff)
 - This merge commit does have value, indicates a feature has landed
 
-##Workflow##
+## Workflow
 1. Get assigned issue on Github
 2. `git checkout -b [your-name]/[feature]` - (Create feature branch)
 3. Work on feature
@@ -38,7 +38,7 @@ Use rebase to do whatever you please to make the history most understandable and
 4. Close PR and link merge commit SHA in comment
 5. Close relevant issue and link merge commit SHA in comment
 
-##Merging##
+## Merging
 - `git fetch`
 - `git checkout [your-name]/[feature]`
 - `git rebase origin/master`
@@ -50,7 +50,7 @@ Use rebase to do whatever you please to make the history most understandable and
 - …make sure you can build, no warnings, etc…
 - `git push origin master`
 
-#Escape Hatches#
+# Escape Hatches
 - `git rebase --abort` while rebasing
 - `git reset --hard ORIG-HEAD` after rebasing
 - `git reflog` if you accidentally delete something you don’t mean to
