@@ -1,0 +1,47 @@
+module.exports = {
+  'parser': 'babel-eslint',
+  'rules': {
+    'strict': 0
+  },
+  'env': {
+    'browser': true,
+    'es6': true,
+    'jquery': true
+  },
+  'extends': 'semistandard',
+  'parserOptions': {
+    'sourceType': 'module'
+  },
+  'plugins': [
+    'react'
+  ],
+  'rules': {
+    'comma-dangle': [
+      'warn',
+      'never'
+    ],
+    'indent': [
+      'warn',
+      2
+    ],
+    'linebreak-style': [
+      'warn',
+      'unix'
+    ],
+    'quotes': [
+      'error',
+      'single'
+    ],
+    'semi': [
+      'error',
+      'always'
+    ],
+    'react/jsx-no-undef': 2,
+    'react/jsx-uses-vars': 1,
+    'no-unused-vars': 1,
+    'no-unused-expressions': 'warn',
+    'no-useless-concat': 'warn',
+    'block-scoped-var': 'error',
+    'consistent-return': 'error'
+  }
+};
