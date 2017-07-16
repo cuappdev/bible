@@ -36,11 +36,7 @@ Before we start, the following `devDependencies` are required:
 For convenience:
 
 ````
-npm install --save-dev babel-cli babel-eslint babel-jest babel-preset-flow
-eslint eslint-config-semistandard eslint-config-standard
-eslint-friendly-formatter eslint-loader eslint-plugin-import
-eslint-plugin-jsx-a11y eslint-plugin-node eslint-plugin-promise
-eslint-plugin-react eslint-plugin-standard flow-bin
+npm install --save-dev babel-cli babel-eslint babel-jest babel-preset-flow eslint eslint-config-semistandard eslint-config-standard eslint-friendly-formatter eslint-loader eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-node eslint-plugin-promise eslint-plugin-react eslint-plugin-standard flow-bin
 ````
 
 **NOTE:** All `ES6`-related transpiling-, `Babel`, and `Webpack`-related things
