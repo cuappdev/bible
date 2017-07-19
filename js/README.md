@@ -38,6 +38,7 @@ having issues, seek the leads' help.
 ![Install Recommended Packages](img/install-recommended-packages.png)
 
 ... and restart `Atom`
+
 4. Point `Nuclide` to use the project's local `Flow` `bin` directory.  Go to
 `Nuclide`'s options page in `Atom`, find the `Nuclide-flow` settings, and check
 the following box:
