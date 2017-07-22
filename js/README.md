@@ -34,12 +34,17 @@ having issues, seek the leads' help.
 1. Download [`Atom`](https://atom.io/)
 2. Install [`Nuclide`](https://nuclide.io/)
 3. Check this box in the `Nuclide` options screen:
+
 ![Install Recommended Packages](img/install-recommended-packages.png)
+
 ... and restart `Atom`
+
 4. Point `Nuclide` to use the project's local `Flow` `bin` directory.  Go to
 `Nuclide`'s options page in `Atom`, find the `Nuclide-flow` settings, and check
 the following box:
+
 ![Nuclide Flow](img/nuclide-flow.png)
+
 5. Ensure your `.babelrc` looks something like this:
 
 ````javascript
