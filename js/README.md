@@ -1,4 +1,4 @@
-# AppDev JavaScript Bible
+# The Cornell AppDev JavaScript Bible
 
 The following `README` articulates how to setup your development environment
 for client-side and server-side development with `JavaScript` for `AppDev`-
