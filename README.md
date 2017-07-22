@@ -1,4 +1,12 @@
 # The Cornell AppDev Bible
 
-In this repo, we document common coding and software engineering practices for our team. It's synced with GitBook, so you should clone this repo and/or read the GitBook at [https://cuappdev.gitbooks.io/bible](https://cuappdev.gitbooks.io/bible). Outside contributors, feel free to make change requests.
+###### Read this as a GitBook at [bible.cornellappdev.com](https://bible.cornellappdev.com)!
+
+## Introduction
+
+In this repo, we document common coding and software engineering practices for our team.
+
+## Making Changes
+
+It's synced with GitBook, so team members should edit the GitBook and/or clone this repo. Outside contributors, feel free to make change requests.
 
