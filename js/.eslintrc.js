@@ -28,6 +28,10 @@ module.exports = {
       'warn',
       'unix'
     ],
+    'max-len': [
+      'warn',
+      80
+    ],
     'quotes': [
       'error',
       'single'
