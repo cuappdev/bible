@@ -12,6 +12,7 @@ label.text = "Interface Builder is fast but not for us."
 label.textAlignment = .center
 label.font = UIFont.systemFont(ofSize: 14.0)
 label.numberOfLines = 0
+label.lineBreakMode = .byWordWrapping
 view.addSubview(label)
 ```
 
@@ -27,12 +28,14 @@ Frame-based layout has the advantage of being the older form of layout and being
 // This must be in viewDidLayoutSubviews()
 let topGutterWidth: CGFloat = 32.0
 let sideGutterWidth: CGFloat = 16.0
-let height: CGFloat = ... // must be calculated annoyingly if multiple lines
+
+let height: CGFloat = ... // must be calculated annoyingly using sizeThatFits: or something
+
 let frame = CGRect(x: sideGutterWidth,
                    y: topGutterWidth,
                    width: view.frame.width - gutterWidth * 2,
                    height: height)
-                   
+
 label.frame = frame
 ```
 
