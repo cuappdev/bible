@@ -2,9 +2,8 @@
 
 * [Introduction](README.md)
 * [Git](git/README.md)
-* [iOS](ios.md)
+* [iOS](ios/README.md)
   * [Swift](ios/swift.md)
-  * [View Layout](ios/view-layout.md)
-* [Swift](iOS/swift/README.md)
+  * [Layout](ios/layout.md)
 * [JavaScript](js/README.md)
 
