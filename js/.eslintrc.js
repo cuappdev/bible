@@ -1,8 +1,5 @@
 module.exports = {
   'parser': 'babel-eslint',
-  'rules': {
-    'strict': 0
-  },
   'env': {
     'browser': true,
     'es6': true,
@@ -16,6 +13,7 @@ module.exports = {
     'react'
   ],
   'rules': {
+    'strict': 0,
     'comma-dangle': [
       'warn',
       'never'
