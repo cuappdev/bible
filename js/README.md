@@ -58,3 +58,17 @@ npm install --save-dev babel-cli babel-jest babel-preset-flow flow-bin
 
 Essentially the same as above, but with a slightly different `Webpack` config. Ask leads for help if this is not setup already.
 
+## Libraries
+
+To setup our core `js` modules:
+
+```` bash
+git clone https://github.com/cuappdev/appdev.js.git
+cd appdev.js
+npm install
+npm run build
+npm link # Links local NPM module in your global npm config
+cd ..
+````
+
+Then, you'll be able to run `npm link appdev` in all `AppDev` `JS` projects to have access to the library.  Be sure to also add the library to the `[libs]` section of your `.flowconfig`
