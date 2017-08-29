@@ -34,11 +34,11 @@ npm install --save-dev babel-cli babel-jest babel-preset-flow flow-bin
 
 ... and restart `Atom`
 
-1. Point `Nuclide` to use the project's local `Flow` `bin` directory.  Go to `Nuclide`'s options page in `Atom`, find the `Nuclide-flow` settings, and check the following box:
+4. Point `Nuclide` to use the project's local `Flow` `bin` directory.  Go to `Nuclide`'s options page in `Atom`, find the `Nuclide-flow` settings, and check the following box:
 
 ![Nuclide Flow](img/nuclide-flow.png)
 
-1. Ensure your `.babelrc` looks something like this:
+5. Ensure your `.babelrc` looks something like this:
 
 ```javascript
 {
@@ -49,9 +49,9 @@ npm install --save-dev babel-cli babel-jest babel-preset-flow flow-bin
 }
 ```
 
-1. Install [`ESLint Atom Plugin`](https://github.com/AtomLinter/linter-eslint)
-2. Clone this repo and `npm install` in the `js` directory to setup your global `ESLint` config.
-3. Point your `ESLint Atom Plugin` to the directory containing this repo in the following way:
+6. Install [`ESLint Atom Plugin`](https://github.com/AtomLinter/linter-eslint)
+7. Clone this repo and `npm install` in the `js` directory to setup your global `ESLint` config.
+8. Point your `ESLint Atom Plugin` to the directory containing this repo in the following way:
    ![ESLint Atom Config](img/eslint-atom.png)
 
 ## Server-Side
