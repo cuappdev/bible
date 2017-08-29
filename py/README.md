@@ -21,3 +21,7 @@ The following `README` articulates how to setup your development environment for
 5. Make sure the following packages are downloaded (install them if they are not):
 
 ![Install Recommended Packages](img/py-packages.png)
+
+6. Refer the `linter-pylint` package to this directory's `.pylintrc` file:
+
+![Pylint Setup](img/pylint.png)
