@@ -9,6 +9,7 @@ The following `README` articulates how to setup your development environment for
 ![Install Recommended Packages](img/install-recommended-packages.png)
 
 ... and restart `Atom`
+
 4. Add the following to the bottom of your `config.cson` for `Atom`, found by going to `Atom > Config...`:
 
 ````cson
