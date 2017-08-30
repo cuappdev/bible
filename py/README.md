@@ -4,13 +4,17 @@ The following `README` articulates how to setup your development environment for
 
 1. Download [`Atom`](https://atom.io/)
 2. Install [`Nuclide`](https://nuclide.io/)
-3. Check this box in the `Nuclide` options screen:
+3. Check this box in the `Nuclide` options screen under the "Hyperclick" header:
 
 ![Install Recommended Packages](img/install-recommended-packages.png)
 
-... and restart `Atom`
+4. __Uncheck__ this box in the `Nuclide` options screen under the "Nuclide-python" header:
 
-4. Add the following to the bottom of your `config.cson` for `Atom`, found by going to `Atom > Config...`:
+![Don't lint with flake8](img/dont-lint-with-flake8.png)
+
+5. Restart `Atom`
+
+6. Add the following to the bottom of your `config.cson` for `Atom`, found by going to `Atom > Config...`:
 
 ````cson
 ".python.source":
@@ -18,11 +22,11 @@ The following `README` articulates how to setup your development environment for
     tabLength: 2
 ````
 
-5. Make sure the following packages are downloaded (install them if they are not):
+7. Make sure the following packages are downloaded (install them if they are not):
 
 ![Install Recommended Packages](img/py-packages.png)
 
-6. Refer the `linter-pylint` package to this directory's `.pylintrc` file:
+8. Refer the `linter-pylint` package to this directory's `.pylintrc` file:
 
 ![Pylint Setup](img/pylint.png)
 
