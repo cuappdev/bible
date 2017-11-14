@@ -16,7 +16,7 @@ module.exports = {
     'strict': 0,
     'comma-dangle': [
       'warn',
-      'never'
+      'always-multiline'
     ],
     'indent': [
       'warn',
