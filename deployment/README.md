@@ -4,12 +4,13 @@ The following `README` articulates how to deploy your service on AWS using Docke
 
 1. Install the [`Amazon CLI`](https://docs.aws.amazon.com/cli/latest/userguide/installing.html)
 2. Install [`Docker`](https://docs.docker.com/install/)
-3. Create a Dockerfile for the app you want to upload
+
+__3. Create a Dockerfile for the app you want to upload__
 
 There is an example Dockerfile in this directory for node-js deployment, but the image
 should be tailored to the specific use case.
 
-4. Test your docker image by creating a docker container for that image, and verify that it runs
+__4. Test your docker image by creating a docker container for that image, and verify that it runs__
 
 Even though the image built successfully, there could still be errors with scripts that
 run, i.e. `webpack`, environment variables not being properly set. 
@@ -20,7 +21,7 @@ this directory.
 Errors on the server are much more difficult to debug, so it is advised to test that
 everything works properly before proceeding.
 
-5. Upload the image to ECS
+__5. Upload the image to ECS__
 
 Next, we need to upload the Docker image that we created to the ECS registry.
 You can read more about Docker images [`here`](https://docs.docker.com/engine/docker-overview/)
@@ -38,7 +39,7 @@ to the AWS servers.
 
 ![upload](img/docker_upload.png)
 
-6. Create a Task Definition
+__6. Create a Task Definition__
 
 Next, navigate to the *Task Definitions* section on the left sidebar, and create a new task definition.
 
@@ -56,7 +57,7 @@ port your app might be running on.
 
 Environment variables, if necessary, should be set in the *ENVIRONMENT* section as well.
 
-7. Create the Cluster
+__7. Create the Cluster__
 
 Navigate to the  *Clusters* section on the left sidebar, and create a cluster for your tasks. 
 
@@ -68,7 +69,7 @@ t2-medium if you're not sure).
 
 The key-pair is optional, since we already tested our containers with `docker-compose up`.
 
-8. Create Services
+__8. Create Services__
 
 Finally, click into your cluster.
 
