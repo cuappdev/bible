@@ -1,0 +1,13 @@
+version: "2"
+
+services: 
+  web:
+    build: .
+    image: clicker
+    environment: 
+      MYSQL_HOST: clickerdb.c5jp4uzo4fit.us-east-1.rds.amazonaws.com
+      MYSQL_USER: cuappdev
+      MYSQL_PASSWORD: fullstackrailroadengineer
+      MYSQL_DB: clickerdb
+    ports:
+      - "3000:3000"
