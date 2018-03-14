@@ -78,9 +78,17 @@ Finally, click into your cluster.
 Create a new service, and set the launch type to `EC2`. Set the number of tasks to 1, and the Service Name
 to something reasonable. Finally, your container should be deployed as an EC2 instance!
 
+Set the *minimum healthy percent* to 0 –– this is so when you want to update the service AWS can safely stop it and redeploy.
+
 If you navigate to the tasks section, and click on Container instance, you should be able to see the public
 IP for your container. 
 
 ![tasks](img/tasks.png)
+
+__9. Updating the Service__
+
+If you ever need to push an update, upload a new docker image to the ECS repository (similar to step 5). Then, click on __update__ on the service you want to update, and press __Force New Redeployment__. 
+
+You don't have to create a new task, since on redeployment a new image is pulled. However, if you change environment variables, you need to create a new task first.
 
 `:)`
