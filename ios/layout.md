@@ -1,8 +1,12 @@
+---
+description: How to create and display views.
+---
+
 # Layout
 
 ## Creating Views
 
-At AppDev, in order to foster collaboration and readability, we will often prefer programmatic view creation and layout as opposed to using Interface Builder, since the generated XML is not readable as plaintext on GitHub. We posit that creating views programmatically is more productive, more maintainable, and often more efficient.
+At AppDev, in order to foster collaboration and readability, we will often prefer programmatic view creation and layout as opposed to using Interface Builder, since the generated XML is not readable as plaintext on GitHub and makes merge conflicts difficult to resolve. We posit that creating views programmatically is more productive, more maintainable, and often more efficient.
 
 ```swift
 // In viewDidLoad

@@ -1,6 +1,6 @@
-# The Cornell AppDev Bible
+# Introduction
 
-###### Read this as a GitBook at [bible.cornellappdev.com](https://bible.cornellappdev.com)!
+### Read this as a GitBook at [bible.cornellappdev.com](https://bible.cornellappdev.com)!
 
 ## Introduction
 

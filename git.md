@@ -41,7 +41,7 @@ Use `rebase` to do whatever you please to make the history most understandable a
 4. Prep for PR
 5. `git fetch`
 6. `git rebase origin/master -i` OR make sure master is up-to-date and `git merge master` on feature branch
-7. `git push origin [your-name]/[feature]` (or if you've set upstream, `git push`)
+7. `git push origin [your-name]/[feature]` \(or if you've set upstream, `git push`\)
 8. Open PR
 9. Respond to PR feedback \(commit and push only\)
 10. Merge
@@ -66,6 +66,4 @@ Use `rebase` to do whatever you please to make the history most understandable a
 * `git rebase --abort` while rebasing
 * `git reset --hard ORIG-HEAD` after rebasing
 * `git reflog` if you accidentally delete something you don’t mean to
-
-
 
