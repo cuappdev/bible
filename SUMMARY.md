@@ -3,7 +3,7 @@
 * [Introduction](README.md)
 * [iOS](ios/README.md)
   * [Xcode](ios/xcode.md)
-  * [Swift](ios/swift.md)
+  * [Language](ios/language.md)
   * [Architecture](ios/architecture.md)
   * [Libraries](ios/libraries.md)
   * [Layout](ios/layout.md)
