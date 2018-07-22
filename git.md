@@ -12,9 +12,17 @@ Continue on and read our Development Workflow!
 
 ## Development Workflow
 
+### Making a commit
+
+Try to keep the amount of code in each commit in the "goldilocks region" of length: not too short and not too long. Each commit should have enough code to be meaningful yet concise enough to still be readable.
+
+Commit messages should be **concise**, **Sentence case**, and **in the present tense**. e.g.:
+
+> c2a47e: Add tap gesture recognizer to EateryCollectionViewCell
+
 ### Pre-Pull Request
 
-Use `rebase` to do whatever you please to make the history most understandable and clear:
+Once your feature or bugfix is ready, use `rebase` to do whatever you please to make the history most understandable and clear:
 
 * Update with contents of master
 * Squash commits together

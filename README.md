@@ -1,7 +1,5 @@
 # Introduction
 
-### Read this as a GitBook at [bible.cornellappdev.com](https://bible.cornellappdev.com)!
-
 ## Introduction
 
 In this repo, we document common coding and software engineering practices for our team.
