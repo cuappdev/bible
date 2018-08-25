@@ -6,7 +6,7 @@ Use MARK to section off code in Xcode
 
 Example:
 
-```text
+```swift
 class RemindersViewController: UIViewController {
 
     // MARK: View vars
@@ -28,13 +28,44 @@ class RemindersViewController: UIViewController {
 
 ```
 
+## Extensions
+
+We want to adapt using extensions more often to separate code. A lot of the time we have a RemindersViewController with 500 lines all in 1 class. It is very hard to read and find what you are looking for. Let us fix this with extensions.
+
+```swift
+//MARK: RemindersViewController
+class RemindersViewController: UIViewController {
+    
+    override func viewDidLoad() {
+        ...
+    }
+}
+
+//MARK: TableView Datasource
+extension RemindersViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        ...
+    }
+}
+
+//MARK: TableView Delegate
+extension RemindersViewController: UITableDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        ...
+    }
+}
+
+```
+
+This makes it a lot easier to read code, especially for new members. Extensions are a great way to organize code within a single file.
+
 ## Strings
 
 Ideally all strings constants should be declared as a `let` variable at the top of the class or in a Constants file
 
 Example:  `let` variable
 
-```text
+```swift
 class RouteOptionsViewController: UIViewController {
     let navigationBarTitle: String = "Route Options"
     ...
@@ -43,7 +74,7 @@ class RouteOptionsViewController: UIViewController {
 
 Example: `Constants.swift`
 
-```text
+```swift
 struct Constants {
     struct Cells {
         static let busIdentifier = "BusStop"
