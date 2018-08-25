@@ -2,7 +2,7 @@
 description: 'How to properly create complex tableviews'
 ---
 
-# Tableviews
+# Table Views
 
 
 ## Why this is important
