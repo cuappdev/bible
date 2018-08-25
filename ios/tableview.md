@@ -33,7 +33,7 @@ We are switching on Int, which has a lot more than 3 cases. To combat this, we u
 
 If we want to add a new section, or move around existing sections, we have go in and rearrange/add new cases to each function where we switch on the indexPath.section. This is also not very readable. If a new member/someone outside tried reading this, it would be very confusing.
 
-##Let's make this better
+## Let's make this better
 
 Let's see how we can fix this issue and make it more readable.
 
