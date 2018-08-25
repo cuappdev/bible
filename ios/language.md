@@ -1,7 +1,3 @@
----
-description: Speaking to the machine.
----
-
 # Language
 
 ## Swift

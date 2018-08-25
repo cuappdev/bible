@@ -1,7 +1,3 @@
----
-description: How to create and display views.
----
-
 # Layout
 
 ## Creating Views
