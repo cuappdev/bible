@@ -12,6 +12,7 @@
   * [Persistence](ios/persistence.md)
   * [Table Views](ios/tableviews.md)
   * [Secret Keys](ios/secret-keys.md)
+  * [Pull Request Reviews](ios/pull-request-reviews.md)
 * [Web](web/README.md)
   * [Servers](web/servers.md)
   * [JavaScript](web/javascript.md)
