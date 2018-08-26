@@ -1,4 +1,4 @@
-# Git issues
+# Git Issues
 
 This year we'd like to standardize our git issues so it's easier for members to see what each pod is working on.
 
