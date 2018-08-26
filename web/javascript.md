@@ -30,7 +30,7 @@ npm install --save-dev babel-cli babel-jest babel-preset-flow flow-bin
 2. Install [`Nuclide`](https://nuclide.io/)
 3. Check this box in the `Nuclide` options screen:
 
-![Install Recommended Packages](../.gitbook/assets/install-recommended-packages%20%281%29.png)
+![Install Recommended Packages](../.gitbook/assets/install-recommended-packages.png)
 
 ... and restart `Atom`
 

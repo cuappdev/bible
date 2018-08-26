@@ -6,7 +6,7 @@ The following `README` articulates how to setup your development environment for
 2. Install [`Nuclide`](https://nuclide.io/)
 3. Check this box in the `Nuclide` options screen under the "Hyperclick" header:
 
-![Install Recommended Packages](../.gitbook/assets/install-recommended-packages.png)
+![Install Recommended Packages](../.gitbook/assets/install-recommended-packages%20%281%29.png)
 
 1. **Uncheck** this box in the `Nuclide` options screen under the "Nuclide-python" header:
 
