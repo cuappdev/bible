@@ -12,25 +12,26 @@ Linting is important and we want to adapt a uniform linter across all iOS projec
 
 ### SwiftLint Installation
 
-To use swiftlint, we just have to install it with brew. In terminal, run:
+To use SwiftLint, we just have to install it with brew. In terminal, run:
 
 ```text
 brew install swiftlint
 ```
 
-
+Then, add SwiftLint to your Podfile
+```text
+pod 'SwiftLint'
+```
 
 ### Configure With Xcode
 
 Integrate SwiftLint into an Xcode scheme to get warnings and errors displayed in the IDE. Just add a new "Run Script Phase" with:
 
 ```bash
-if which swiftlint >/dev/null; then
-  swiftlint
-else
-  echo "warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint"
-fi
+"${PODS_ROOT}/SwiftLint/swiftlint"
 ```
+
+Note: This is assuming you've installed SwiftLint with CocoaPods. See the script in the SwiftLint [README](https://github.com/realm/SwiftLint#xcode) for the standard run script.
 
 ![](../.gitbook/assets/image.png)
 
