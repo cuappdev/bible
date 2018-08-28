@@ -55,8 +55,8 @@ We'll also have miscellaneous labels can be used to describe additional aspects 
 
 | Label | Description | Hex Color |
 | :--- | :--- | :--- |
-| Question | For issues that need further information or discussion |  |
-| Help Wanted | For issues that need more eyes |  |
-| Good First Issue | For issues that will help new members onboard |  |
-| Duplicate | For issues that already exists |  |
+| Note: Question | For issues that need further information or discussion |  |
+| Note: Help Wanted | For issues that need more eyes |  |
+| Note: Good First Issue | For issues that will help new members onboard |  |
+| Note: Duplicate | For issues that already exists |  |
 
