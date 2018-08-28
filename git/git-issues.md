@@ -37,7 +37,6 @@ We'll use 2 types of labels to describe the issue:
 | Label | Description | Hex Color |
 | :--- | :--- | :--- |
 | Priority: Critical | For issues that break the master branch |  |
-|  |  |  |
 | Priority: High | For issues that the pod wants to work on first  |  |
 | Priority: Medium | For issues that the pod wants to work on but are not high priority |  |
 | Priority: Low | For issues that the pod may want to work on later in the future |  |
