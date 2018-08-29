@@ -10,16 +10,13 @@ Example:
 class RemindersViewController: UIViewController {
 
     // MARK: View vars
-    
     var tableView: UITableView!
     var checbox: UIButton!
     
     // MARK:  Data vars
-    
     var reminders: [Reminder] = []
     
     // MARK: View Lifecycle
-    
     override func viewDidLoad() {
         ....
     }
@@ -33,7 +30,7 @@ class RemindersViewController: UIViewController {
 We want to adapt using extensions more often to separate code. A lot of the time we have a RemindersViewController with 500 lines all in 1 class. It is very hard to read and find what you are looking for. Let us fix this with extensions.
 
 ```swift
-//MARK: RemindersViewController
+// MARK: RemindersViewController
 class RemindersViewController: UIViewController {
     
     override func viewDidLoad() {
@@ -41,14 +38,14 @@ class RemindersViewController: UIViewController {
     }
 }
 
-//MARK: TableView Datasource
+// MARK: TableView Datasource
 extension RemindersViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         ...
     }
 }
 
-//MARK: TableView Delegate
+// MARK: TableView Delegate
 extension RemindersViewController: UITableDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         ...
