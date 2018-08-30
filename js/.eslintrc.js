@@ -6,7 +6,10 @@ module.exports = {
     'jquery': true,
     'jest': true
   },
-  'extends': 'semistandard',
+  'extends': [
+    'semistandard',
+    'airbnb'
+  ],
   'parserOptions': {
     'sourceType': 'module'
   },
@@ -45,6 +48,7 @@ module.exports = {
     'no-unused-expressions': 'warn',
     'no-useless-concat': 'warn',
     'block-scoped-var': 'error',
-    'consistent-return': 'error'
+    'consistent-return': 'error',
+    'class-methods-use-this': [1, { "exceptMethods": [] }]
   }
 };
