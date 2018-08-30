@@ -17,11 +17,13 @@ module.exports = {
     'react'
   ],
   'rules': {
-    'strict': 0,
+    'block-scoped-var': 'error',
+    'class-methods-use-this': 1, // warning when class method doesn't use 'this'
     'comma-dangle': [
       'warn',
       'never'
     ],
+    'consistent-return': 'error',
     'indent': [
       'warn',
       2
@@ -30,25 +32,23 @@ module.exports = {
       'warn',
       'unix'
     ],
-    'max-len': [
+    'max-len': [ // max line lengths
       'warn',
       80
     ],
-    'quotes': [
+    'no-unused-expressions': 'warn', // checks for unused var, exprs, etc.
+    'no-unused-vars': 1,
+    'no-useless-concat': 'warn',
+    'quotes': [ // single quotes only
       'error',
       'single'
     ],
+    'react/jsx-no-undef': 2,
+    'react/jsx-uses-vars': 1,
     'semi': [
       'error',
       'always'
     ],
-    'react/jsx-no-undef': 2,
-    'react/jsx-uses-vars': 1,
-    'no-unused-vars': 1,
-    'no-unused-expressions': 'warn',
-    'no-useless-concat': 'warn',
-    'block-scoped-var': 'error',
-    'consistent-return': 'error',
-    'class-methods-use-this': [1, { "exceptMethods": [] }]
+    'strict': 0
   }
 };
