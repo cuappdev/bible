@@ -13,7 +13,7 @@
     "babel-eslint": "^7.2.3",
     "babel-jest": "^20.0.3",
     "babel-preset-flow": "^6.23.0",
-    "eslint": "^4.2.0",
+    "eslint": "^5.4.0",
     "eslint-config-semistandard": "^11.0.0",
     "eslint-config-standard": "^10.2.1",
     "eslint-friendly-formatter": "^3.0.0",
