@@ -21,7 +21,7 @@ module.exports = {
     'class-methods-use-this': 1, // warning when class method doesn't use 'this'
     'comma-dangle': [
       'warn',
-      'never'
+      'always-multiline'
     ],
     'consistent-return': 'error',
     'indent': [
