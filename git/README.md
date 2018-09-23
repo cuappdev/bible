@@ -16,7 +16,7 @@ Continue on and read our Development Workflow!
 
 Try to keep the amount of code in each commit in the "goldilocks region" of length: not too short and not too long. Each commit should have enough code to be meaningful yet concise enough to still be readable.
 
-Commit messages should be **concise**, and in **Sentence case**. e.g.:
+Commit messages should be **concise** and in **sentence case**. E.g.:
 
 > c2a47e: Add tap gesture recognizer to EateryCollectionViewCell
 
@@ -28,6 +28,17 @@ Once your feature or bugfix is ready, use `rebase` to do whatever you please to 
 * Squash commits together
 * Separate single commits into multiple ones
 * Force push changes to your branch \(the only time force push is okay\)
+
+### Pull Request
+
+Some standardization rules:
+
+* Set the title of the PR to your feature name
+  * Ex: 
+    * If your branch is called `Monica/Feature` then your PR title should be `Feature`
+* In the PR description, write the issue \# and hyperlink that with the issue link
+  * Note: 
+    * Github should automatically fill in the issue number if you type in "\#" in the description
 
 ### Post-Pull Request
 
