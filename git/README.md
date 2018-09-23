@@ -16,7 +16,7 @@ Continue on and read our Development Workflow!
 
 Try to keep the amount of code in each commit in the "goldilocks region" of length: not too short and not too long. Each commit should have enough code to be meaningful yet concise enough to still be readable.
 
-Commit messages should be **concise**, **Sentence case**, and **in the present tense**. e.g.:
+Commit messages should be **concise**, and in **Sentence case**. e.g.:
 
 > c2a47e: Add tap gesture recognizer to EateryCollectionViewCell
 
@@ -27,51 +27,32 @@ Once your feature or bugfix is ready, use `rebase` to do whatever you please to 
 * Update with contents of master
 * Squash commits together
 * Separate single commits into multiple ones
-* Reorder commits
-* Remove commits
-* Alter commit messages
 * Force push changes to your branch \(the only time force push is okay\)
 
 ### Post-Pull Request
 
-* Treat open PR as amend-only, rebasing and force pushing will mutate/destroy commentary history
-* Commit and push to your branch to address feedback from code review Link commit SHA in Github comments so your reviewer can jump directly to the commit where you fixed whatever was brought up Pre-Merge
-* Do one large rebase to bring your branch up-to-date with master
-* Do not push rebased version — keeps commentary history
-* Do explicitly merge with master \(using —no-ff\)
-* This merge commit does have value, indicates a feature has landed
+* Commit and push to your branch to address feedback from code review
+* Squash commits
 
 ### Workflow
 
 1. Get assigned issue on Github
-2. `git checkout -b [your-name]/[feature]` - \(Create feature branch\)
+2. `git checkout -b [your-name]/[feature]` \(Create feature branch\)
 3. Work on feature
-4. Prep for PR
-5. `git fetch`
-6. `git rebase origin/master -i` OR make sure master is up-to-date and `git merge master` on feature branch
-7. `git push origin [your-name]/[feature]` \(or if you've set upstream, `git push`\)
-8. Open PR
-9. Respond to PR feedback \(commit and push only\)
-10. Merge
-11. Close PR and link merge commit SHA in comment
-12. Close relevant issue and link merge commit SHA in comment
+4. Open Pull Request
+5. Respond to Pull Request feedback
+6. Merge
+7. Close PR and link merge commit SHA in comment
+8. Close relevant issue and link merge commit SHA in comment
 
 ### Merging
 
 * `git fetch`
 * `git checkout [your-name]/[feature]`
-* `git rebase origin/master`
-* …resolve conflicts…
-* `git checkout master`
-* `git reset --hard origin/master`
-* `git merge --no-ff [your-name]/[feature]`
-* …there should be no conflicts at this point since they were resolved already…
-* …make sure you can build, no warnings, etc…
-* `git push origin master`
+* `git merge master`
+* `git push`
 
 ### Escape Hatches
 
 * `git rebase --abort` while rebasing
-* `git reset --hard ORIG-HEAD` after rebasing
-* `git reflog` if you accidentally delete something you don’t mean to
 
