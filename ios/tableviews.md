@@ -41,7 +41,7 @@ For this example I will be using an example from Ithaca Transit.
 We can start by creating a new enum type:
 
 ```swift
-enum Section {
+struct Section {
     let type: SectionType
     var items: [ItemType]
 }
