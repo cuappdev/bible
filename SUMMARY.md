@@ -21,7 +21,12 @@
 * [Git](git/README.md)
   * [Git Issues](git/git-issues.md)
 * [Backend](backend/README.md)
-  * [Pull Request Reviews](backend/pull-request-reviews.md)
+  * [Style + Linting](backend/style-+-linting/README.md)
+    * [Pull Request Reviews](backend/style-+-linting/pull-request-reviews.md)
 * [Android](android/README.md)
   * [Pull Request Reviews](android/pull-request-reviews.md)
+
+## Documentation
+
+* [Uplift](documentation/uplift.md)
 

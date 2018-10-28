@@ -24,9 +24,8 @@ Commit messages should be **concise** and in **sentence case**. E.g.:
 
 Once your feature or bugfix is ready, use `rebase` to do whatever you please to make the history most understandable and clear:
 
-* Update with contents of master
 * Squash commits together
-* Separate single commits into multiple ones
+* Amend commit messages
 * Force push changes to your branch \(the only time force push is okay\)
 
 ### Pull Request
@@ -34,11 +33,9 @@ Once your feature or bugfix is ready, use `rebase` to do whatever you please to 
 Some standardization rules:
 
 * Set the title of the PR to your feature name
-  * Ex: 
-    * If your branch is called `Monica/Feature` then your PR title should be `Feature`
+  * Ex: If your branch is called `Monica/Feature` then your PR title should be `Feature`
 * In the PR description, write the issue \# and hyperlink that with the issue link
-  * Note: 
-    * Github should automatically fill in the issue number if you type in "\#" in the description
+  * Note: Github should automatically fill in the issue number if you type in "\#" in the description
 
 ### Post-Pull Request
 
