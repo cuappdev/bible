@@ -12,6 +12,17 @@ Continue on and read our Development Workflow!
 
 ## Development Workflow
 
+### Workflow
+
+1. Get assigned issue on Github
+2. `git checkout -b [your-name]/[feature]` \(Create feature branch\)
+3. Work on feature
+4. Open Pull Request
+5. Respond to Pull Request feedback
+6. Merge
+7. Close PR and delete branch
+8. Close relevant issue and link PR number in comment
+
 ### Making a commit
 
 Try to keep the amount of code in each commit in the "goldilocks region" of length: not too short and not too long. Each commit should have enough code to be meaningful yet concise enough to still be readable.
@@ -42,23 +53,15 @@ Some standardization rules:
 * Commit and push to your branch to address feedback from code review
 * Squash commits
 
-### Workflow
-
-1. Get assigned issue on Github
-2. `git checkout -b [your-name]/[feature]` \(Create feature branch\)
-3. Work on feature
-4. Open Pull Request
-5. Respond to Pull Request feedback
-6. Merge
-7. Close PR and link merge commit SHA in comment
-8. Close relevant issue and link merge commit SHA in comment
-
 ### Merging
 
-* `git fetch`
-* `git checkout [your-name]/[feature]`
-* `git merge master`
-* `git push`
+```bash
+git checout master
+git pull
+git checkout [your-name]/[feature]
+git merge master # merges master into your branch
+git push
+```
 
 ### Escape Hatches
 
