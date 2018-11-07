@@ -4,36 +4,27 @@ description: API Documentation for Uplift
 
 # Uplift
 
-{% api-method method="get" host="https://api.cakes.com" path="/v1/cakes/:id" %}
+{% api-method method="get" host="http://uplift-backend.cornellappdev.com" path="/graphQL" %}
 {% api-method-summary %}
-Get Cakes
+GraphQL
 {% endapi-method-summary %}
 
 {% api-method-description %}
-This endpoint allows you to get free cakes.
+This endpoint takes GraphQL queries and get the requested data as JSON result.
 {% endapi-method-description %}
 
 {% api-method-spec %}
 {% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="id" type="string" %}
-ID of the cake to get, for free of course.
-{% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
-
-{% api-method-headers %}
-{% api-method-parameter name="Authentication" type="string" required=true %}
-Authentication token to track down who is emptying our stocks.
-{% endapi-method-parameter %}
-{% endapi-method-headers %}
-
 {% api-method-query-parameters %}
-{% api-method-parameter name="recipe" type="string" %}
-The API will do its best to find a cake matching the provided recipe.
-{% endapi-method-parameter %}
-
-{% api-method-parameter name="gluten" type="boolean" %}
-Whether the cake should be gluten-free or not.
+{% api-method-parameter name="GraphQL Query" type="string" required=true %}
+Example:  
+  
+{  
+  gyms {  
+    id  
+    name  
+  }  
+}
 {% endapi-method-parameter %}
 {% endapi-method-query-parameters %}
 {% endapi-method-request %}
@@ -41,32 +32,43 @@ Whether the cake should be gluten-free or not.
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
-Cake successfully retrieved.
+Response to example query
 {% endapi-method-response-example-description %}
 
-```javascript
-{
-    "name": "Cake's name",
-    "recipe": "Cake's recipe name",
-    "cake": "Binary cake"
-}
 ```
-{% endapi-method-response-example %}
-
-{% api-method-response-example httpCode=404 %}
-{% api-method-response-example-description %}
-Could not find a cake matching this query.
-{% endapi-method-response-example-description %}
-
-```javascript
 {
-    "message": "Ain't no cake like that."
+  "data": {
+    "gyms": [
+      {
+        "id": "7045d11329b3645c93556c5aaf44bb21d56934f5",
+        "name": "Helen Newman"
+      },
+      {
+        "id": "7c53229a64f4794f57a715a9ec0c7f806db23514",
+        "name": "Appel"
+      },
+      {
+        "id": "1f114d3b981f832c858f5cfa52f3a1eb6191e1a4",
+        "name": "Noyes"
+      },
+      {
+        "id": "939c7a2c16d2299cc8558475a8007defc414069c",
+        "name": "Teagle Up"
+      },
+      {
+        "id": "043c57f3b63411c7a3500c0986fa4b1c8712798c",
+        "name": "Teagle Down"
+      }
+    ]
+  }
 }
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
+
+For more information on GraphQL: [https://graphql.org/](https://graphql.org/)
 
 
 
