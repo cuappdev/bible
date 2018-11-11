@@ -30,4 +30,6 @@
 ## Documentation
 
 * [Uplift](documentation/uplift.md)
+* [Pollo](documentation/pollo/README.md)
+  * [Backend API](documentation/pollo/backend-api.md)
 
