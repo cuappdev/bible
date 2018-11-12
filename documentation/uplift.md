@@ -4,7 +4,7 @@ description: API Documentation for Uplift
 
 # Uplift
 
-{% api-method method="get" host="http://uplift-backend.cornellappdev.com" path="/graphQL" %}
+{% api-method method="post" host="http://uplift-backend.cornellappdev.com" path="/graphQL" %}
 {% api-method-summary %}
 GraphQL
 {% endapi-method-summary %}
