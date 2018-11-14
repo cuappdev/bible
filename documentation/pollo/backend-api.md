@@ -1041,7 +1041,7 @@ Authenticate mobile
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-body-parameters %}
-{% api-method-parameter name="idToken" type="string" required=false %}
+{% api-method-parameter name="idToken" type="string" required=true %}
 
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
