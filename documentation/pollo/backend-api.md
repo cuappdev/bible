@@ -566,8 +566,8 @@ Add members
 {% endapi-method-headers %}
 
 {% api-method-query-parameters %}
-{% api-method-parameter name="memberIds" type="array" required=true %}
-int\[\]
+{% api-method-parameter name="memberIDs" type="array" required=true %}
+int\[\]  
 {% endapi-method-parameter %}
 {% endapi-method-query-parameters %}
 {% endapi-method-request %}
@@ -610,7 +610,7 @@ Remove members
 {% endapi-method-headers %}
 
 {% api-method-query-parameters %}
-{% api-method-parameter name="memberIds" type="array" required=true %}
+{% api-method-parameter name="memberIDs" type="array" required=true %}
 int\[\]
 {% endapi-method-parameter %}
 {% endapi-method-query-parameters %}
@@ -654,7 +654,7 @@ Add admins
 {% endapi-method-headers %}
 
 {% api-method-query-parameters %}
-{% api-method-parameter name="adminIds" type="array" required=true %}
+{% api-method-parameter name="adminIDs" type="array" required=true %}
 int\[\]
 {% endapi-method-parameter %}
 {% endapi-method-query-parameters %}
@@ -698,7 +698,7 @@ Remove admins
 {% endapi-method-headers %}
 
 {% api-method-query-parameters %}
-{% api-method-parameter name="adminIds" type="array" required=true %}
+{% api-method-parameter name="adminIDs" type="array" required=true %}
 int\[\]
 {% endapi-method-parameter %}
 {% endapi-method-query-parameters %}
@@ -982,7 +982,7 @@ Delete a poll
 type User {
   id: number,
   name: string,
-  netId: string
+  netID: string
 }
 ```
 
@@ -1099,7 +1099,7 @@ Built with Socket.io. [Documentation found here.](https://socket.io/docs/)
 
 ### Socket Connection
 
-Connect \(default socket\) Make sure to visit `/start/group/` before joining a socket because this will create the socket if not created yet. Need to emit `userType` and `googleId` on connect.  
+Connect \(default socket\) Make sure to visit `/start/group/` before joining a socket because this will create the socket if not created yet. Need to emit `userType` and `googleID` on connect.  
   
 Disconnect \(default socket\)
 
@@ -1121,7 +1121,7 @@ Disconnect \(default socket\)
 | `server/poll/start` | `Poll` object without id | Admin sends to start a poll |
 | `server/poll/end` | _empty_ | Admin sends to stop a poll |
 | `server/poll/results` | _empty_ | Admin sends to share results |
-| `server/poll/tally` | `answerId` and `googleId` | User sends to reveal their chosen response to the server  |
+| `server/poll/tally` | `answerID` and `googleID` | User sends to reveal their chosen response to the server  |
 | `server/poll/upvote` | `Answer` object without id | User sends to upvote an answer |
 
 #### To Student
@@ -1160,7 +1160,7 @@ type CurrentState {
 }
 ```
 
-Example of results. Note: answers is a mapping of googleId to selected option.
+Example of results. Note: answers is a mapping of googleID to selected option.
 
 ```javascript
 results = {'A': {'text': 'blue', 'count': 1}, 'B': {'text': 'red', 'count': 2}}
@@ -1174,7 +1174,7 @@ results = {1: {'text': 'blue', 'count': 0}, 2: {'text': 'red', 'count': 2}}
 ```javascript
 type Answer {
     id: id,
-    googleId: string,
+    googleID: string,
     poll: id,
     choice: string,
     text: string
