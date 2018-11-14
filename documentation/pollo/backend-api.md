@@ -224,7 +224,7 @@ type Group {
 Previously known as Session.
 {% endhint %}
 
-{% api-method method="post" host="http://pollo-backend.cornellappdev.com" path="/api/v2/sessions/" %}
+{% api-method method="post" host="http://pollo-backend.cornellappdev.com" path="/api/v2/groups/" %}
 {% api-method-summary %}
 Create a group
 {% endapi-method-summary %}
@@ -317,7 +317,7 @@ Get all groups
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="role" type="string" required=true %}
-If role is `member`, this will return all sessions you are in. If role is `admin`, this will return all sessions you are an admin of. 
+If role is `member`, this will return all groups you are in. If role is `admin`, this will return all groups you are an admin of. 
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
@@ -343,7 +343,7 @@ Edges<Group>
 {% endapi-method %}
 
 {% hint style="info" %}
-Each of the Group nodes has an extra field called `updatedAt`indicating the latest activity in Unix time & field called `isLive` indicating whether the session is live or not.
+Each of the Group nodes has an extra field called `updatedAt`indicating the latest activity in Unix time & field called `isLive` indicating whether the group is live or not.
 {% endhint %}
 
 {% api-method method="put" host="http://pollo-backend.cornellappdev.com" path="/api/v2/groups/:id/" %}
@@ -835,7 +835,7 @@ Node<Poll>
 
 {% api-method method="get" host="http://pollo-backend.cornellappdev.com" path="/api/v2/groups/:id/polls/" %}
 {% api-method-summary %}
-Get all polls for a session sorted by date
+Get all polls for a group sorted by date
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -1103,7 +1103,7 @@ Connect \(default socket\) Make sure to visit `/start/group/` before joining a s
   
 Disconnect \(default socket\)
 
-### Session
+### Group
 
 #### Rest
 
