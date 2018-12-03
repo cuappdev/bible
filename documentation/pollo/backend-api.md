@@ -224,7 +224,7 @@ type Group {
 Previously known as Session.
 {% endhint %}
 
-{% api-method method="post" host="http://pollo-backend.cornellappdev.com" path="/api/v2/groups/" %}
+{% api-method method="post" host="http://pollo-backend.cornellappdev.com" path="/api/v2/sessions/" %}
 {% api-method-summary %}
 Create a group
 {% endapi-method-summary %}
@@ -266,7 +266,7 @@ Node<Group>
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="get" host="http://pollo-backend.cornellappdev.com" path="/api/v2/groups/:id" %}
+{% api-method method="get" host="http://pollo-backend.cornellappdev.com" path="/api/v2/sessions/:id" %}
 {% api-method-summary %}
 Get a group
 {% endapi-method-summary %}
@@ -304,7 +304,7 @@ Node<Group>
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="get" host="http://pollo-backend.cornellappdev.com" path="/api/v2/groups/all/:role" %}
+{% api-method method="get" host="http://pollo-backend.cornellappdev.com" path="/api/v2/sessions/all/:role" %}
 {% api-method-summary %}
 Get all groups
 {% endapi-method-summary %}
@@ -346,7 +346,7 @@ Edges<Group>
 Each of the Group nodes has an extra field called `updatedAt`indicating the latest activity in Unix time & field called `isLive` indicating whether the group is live or not.
 {% endhint %}
 
-{% api-method method="put" host="http://pollo-backend.cornellappdev.com" path="/api/v2/groups/:id/" %}
+{% api-method method="put" host="http://pollo-backend.cornellappdev.com" path="/api/v2/sessions/:id/" %}
 {% api-method-summary %}
 Update a group
 {% endapi-method-summary %}
@@ -390,7 +390,7 @@ Node<Group>
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="delete" host="http://pollo-backend.cornellappdev.com" path="/api/v2/groups/:id/" %}
+{% api-method method="delete" host="http://pollo-backend.cornellappdev.com" path="/api/v2/sessions/:id/" %}
 {% api-method-summary %}
 Delete a group
 {% endapi-method-summary %}
@@ -428,7 +428,7 @@ Delete a group
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="delete" host="http://pollo-backend.cornellappdev.com" path="/api/v2/groups/:id/members/" %}
+{% api-method method="delete" host="http://pollo-backend.cornellappdev.com" path="/api/v2/sessions/:id/members/" %}
 {% api-method-summary %}
 Leave a group
 {% endapi-method-summary %}
@@ -466,7 +466,7 @@ Leave a group
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="get" host="http://pollo-backend.cornellappdev.com" path="/api/v2/groups/:id/members/" %}
+{% api-method method="get" host="http://pollo-backend.cornellappdev.com" path="/api/v2/sessions/:id/members/" %}
 {% api-method-summary %}
 Get members
 {% endapi-method-summary %}
@@ -504,7 +504,7 @@ Edges<User>
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="get" host="http://pollo-backend.cornellappdev.com" path="/api/v2/groups/:id/admins/" %}
+{% api-method method="get" host="http://pollo-backend.cornellappdev.com" path="/api/v2/sessions/:id/admins/" %}
 {% api-method-summary %}
 Get admins
 {% endapi-method-summary %}
@@ -542,7 +542,7 @@ Edges<User>
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="post" host="http://pollo-backend.cornellappdev.com" path="/api/v2/:id/members/" %}
+{% api-method method="post" host="http://pollo-backend.cornellappdev.com" path="/api/v2/sessions/:id/members/" %}
 {% api-method-summary %}
 Add members
 {% endapi-method-summary %}
@@ -586,7 +586,7 @@ int\[\]
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="delete" host="http://pollo-backend.cornellappdev.com" path="/api/v2/groups/:id/members/" %}
+{% api-method method="delete" host="http://pollo-backend.cornellappdev.com" path="/api/v2/sessions/:id/members/" %}
 {% api-method-summary %}
 Remove members
 {% endapi-method-summary %}
@@ -630,7 +630,7 @@ int\[\]
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="post" host="http://pollo-backend.cornellappdev.com" path="/api/v2/groups/:id/admins/" %}
+{% api-method method="post" host="http://pollo-backend.cornellappdev.com" path="/api/v2/sessions/:id/admins/" %}
 {% api-method-summary %}
 Add admins
 {% endapi-method-summary %}
@@ -674,7 +674,7 @@ int\[\]
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="put" host="http://pollo-backend.cornellappdev.com" path="/api/v2/groups/:id/admins/" %}
+{% api-method method="put" host="http://pollo-backend.cornellappdev.com" path="/api/v2/sessions/:id/admins/" %}
 {% api-method-summary %}
 Remove admins
 {% endapi-method-summary %}
@@ -739,7 +739,7 @@ type Poll {
 `correctAnswer` is the correct answer choice for multiple choice \(ex. `correctAnswer: 'A'` \). Empty string if no correct answer selected for multiple choice or the question is free response. 
 {% endhint %}
 
-{% api-method method="post" host="http://pollo-backend.cornellappdev.com" path="/api/v2/groups/:id/polls/" %}
+{% api-method method="post" host="http://pollo-backend.cornellappdev.com" path="/api/v2/sessions/:id/polls/" %}
 {% api-method-summary %}
 Create a poll
 {% endapi-method-summary %}
@@ -833,7 +833,7 @@ Node<Poll>
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="get" host="http://pollo-backend.cornellappdev.com" path="/api/v2/groups/:id/polls/" %}
+{% api-method method="get" host="http://pollo-backend.cornellappdev.com" path="/api/v2/sessions/:id/polls/" %}
 {% api-method-summary %}
 Get all polls for a group sorted by date
 {% endapi-method-summary %}
@@ -1116,20 +1116,59 @@ Disconnect \(default socket\)
 
 #### To Server
 
-| Message | Body | Description |
-| :--- | :--- | :--- |
-| `server/poll/start` | `Poll` object without id | Admin sends to start a poll |
-| `server/poll/end` | _empty_ | Admin sends to stop a poll |
-| `server/poll/results` | _empty_ | Admin sends to share results |
-| `server/poll/tally` | `answerID` and `googleID` | User sends to reveal their chosen response to the server  |
-| `server/poll/upvote` | `Answer` object without id | User sends to upvote an answer |
-
-#### To Student
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Message</th>
+      <th style="text-align:left">Body</th>
+      <th style="text-align:left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left"><code>server/poll/start</code>
+      </td>
+      <td style="text-align:left"><code>Poll</code> object without id</td>
+      <td style="text-align:left">Admin sends to start a poll</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>server/poll/end</code>
+      </td>
+      <td style="text-align:left"><em>empty</em>
+      </td>
+      <td style="text-align:left">Admin sends to stop a poll</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>server/poll/results</code>
+      </td>
+      <td style="text-align:left"><em>empty</em>
+      </td>
+      <td style="text-align:left">Admin sends to share results</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>server/poll/tally</code>
+      </td>
+      <td style="text-align:left"><code>Answer</code> object without id</td>
+      <td style="text-align:left">User sends to reveal their chosen response to the server</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>server/poll/upvote</code>
+      </td>
+      <td style="text-align:left">
+        <p><code>{ answerID,</code>
+        </p>
+        <p><code>googleID }</code>
+        </p>
+      </td>
+      <td style="text-align:left">User sends to upvote an answer</td>
+    </tr>
+  </tbody>
+</table>#### To Student
 
 | Message | Body | Description |
 | :--- | :--- | :--- |
 | `user/poll/start` | { poll: `Poll` object } | User receives to display a poll |
-| `user/poll/end` | `{ poll:` Poll `object }` | User receives when poll has ended |
+| `user/poll/end` | { poll: `Poll` object } | User receives when poll has ended |
 | `user/poll/results/` | `CurrentState` object | User receives when if admin decides to share results |
 | `user/poll/results/live` | `CurrentState` object | User receives when there is a live FR question when user first joins socket |
 | `user/count` | { count: `user count` } | User receives number of live users in socket |
