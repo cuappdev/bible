@@ -35,4 +35,6 @@
 * [Uplift](documentation/uplift.md)
 * [Pollo](documentation/pollo/README.md)
   * [Backend API](documentation/pollo/backend-api.md)
+* [Eatery](documentation/eatery/README.md)
+  * [Backend API](documentation/eatery/backend-api.md)
 
