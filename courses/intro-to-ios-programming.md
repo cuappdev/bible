@@ -19,7 +19,7 @@ The following is a list of the topics covered in this **10 week** course:
 7. CocoaPods
 8. Various additional topics \(GitHub, StackViews, CHCR priorities, SnapKit\)
 
-The course meets every **Monday** from **7:30-8:30pm** starting on **Feb 14th**.
+The course meets every **Monday** from **7:30-8:30pm** starting on **Feb 18th**.
 
 ## Textbook
 
