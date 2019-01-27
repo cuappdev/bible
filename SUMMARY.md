@@ -15,6 +15,7 @@
   * [Libraries](standards/ios/libraries.md)
   * [Layout](standards/ios/layout.md)
   * [Networking](standards/ios/networking.md)
+  * [State](standards/ios/state.md)
   * [Persistence](standards/ios/persistence.md)
   * [Table Views](standards/ios/tableviews.md)
   * [Pull Request Reviews](standards/ios/pull-request-reviews.md)
