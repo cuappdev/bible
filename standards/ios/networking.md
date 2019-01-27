@@ -143,7 +143,7 @@ class EateryViewController: UIViewController {
     }
     
     func getPrivateEatery(forID id: Int) -> Future<Eatery> {
-        return networking(Endpoint.privateEatery(with: id).decode(Eatery.self)
+        return networking(Endpoint.privateEatery(with: id).decode()
     }
 }
 ```
