@@ -54,7 +54,6 @@ included: # paths to include during linting. `--path` is ignored if present.
 - YOUR_PROJECT_NAME
 excluded: # paths to ignore during linting. Takes precedence over `included`.
 - Pods
-- YOUR_PROJECT_NAME/R.generated.swift
 - YOUR_PROJECT_NAME/AppDelegate.swift
 
 # configurable rules can be customized from this configuration file
