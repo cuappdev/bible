@@ -148,5 +148,33 @@ class EateryViewController: UIViewController {
 }
 ```
 
+### Advanced Futures
 
+You can also do really cool chaining to get rid of "callback hell". Let's take a look at an example to load a user, then load the user's friend list.
+
+```swift
+func loadUser(withID id: Int) -> Future<User> {
+    return networking(Endpoint.user(from: id)).decode()
+}
+
+func loadFriends(username: String) -> Future<[User]> {
+    return networking(Endpoint.loadFriends(with: username)).decode()
+}
+
+...
+
+loadUser(withID: 10).chained { user in
+    self.user = user //save the user and continue to getting the friends list
+    return self.loadFriends(user.username)
+}.observe {[weak self] result in
+switch result {
+    case .value(let friendsList):
+        self?.friendsList = friendsList
+    case .error(let error):
+        self?.presentError(with: error) //Makes us handle this case of the request failing!
+    }
+}
+```
+
+The cool thing is you can chain infinite events technically. If you have 5 different steps, you won't get into some deeply nested callback hell issue. 
 
