@@ -21,6 +21,10 @@ The following is a list of the topics covered in this **10 week** course:
 
 The course meets every **Monday** from **7:30-8:30pm** starting on **Feb 18th**.
 
+For more information about the course, please see the tentative syllabus here:
+
+{% file src="../.gitbook/assets/cs1998syllabus-tentative.pdf" caption="CS1998Syllabus-Tentative" %}
+
 ## Textbook
 
 The course staff has made a compilation of handouts summarizing the main ideas and concepts from each of our lectures. Download it below:
