@@ -21,7 +21,48 @@ Get all campus eateries
 {% api-method-parameter name="GraphQL Query" type="integer" required=false %}
 id for a specific eatery.  No argument will result in a get all request  
   
-example query
+example query  
+  
+{   
+    campusEateries {   
+        about   
+        coordinates {   
+            latitude   
+            longitude   
+        }   
+        eateryType   
+        id  
+        imageUrl  
+        location  
+        name  
+        operatingHours {  
+            date   
+            events {  
+                calSummary  
+                description  
+                startTime  
+                endTime  
+                menu {  
+                    itemCount  
+                    items {  
+                         healthy  
+                         item  
+                    }   
+                }   
+            }   
+        }   
+        paymentMethods {   
+             brbs  
+             cash  
+             cornellCard  
+             credit  
+             mobile  
+             swipes  
+        }   
+        phone  
+        slug  
+    }  
+}
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 {% endapi-method-request %}
@@ -37,9 +78,7 @@ example query
   "data": {
     "campusEateries": [
       {
-        "about": "",
-          "descriptionShort": "West"
-        },
+        "about": "<text>",
         "coordinates": {
           "latitude": 42.444266,
           "longitude": -76.487598
@@ -49,7 +88,6 @@ example query
         "imageUrl": "https://raw.githubusercontent.com/cuappdev/assets/master/eatery/eatery-images/104-West.jpg",
         "location": "104 West Avenue",
         "name": "104West!",
-        "nameShort": "104West!",
         "operatingHours": [
           {
             "date": "2018-12-04",
@@ -57,6 +95,7 @@ example query
               {
                 "calSummary": "Lunch",
                 "description": "Lunch",
+                "startTime": "2018-12-04:11:00am"
                 "endTime": "2018-12-04:02:00pm",
                 "menu": [
                   {
@@ -73,8 +112,7 @@ example query
                     ]
                   },
                   ...  # more stations
-                ],
-                "startTime": "2018-12-04:11:00am"
+                ]
               },
               ...  # more events
             ]
