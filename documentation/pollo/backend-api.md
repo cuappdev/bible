@@ -867,8 +867,10 @@ A dictionary with dates mapped to a list of polls
 Example: 
 {
   success: true,
-  data: {
-    "Sep 27 2018": [
+  data: [ 
+    {
+      date: "Sep 27 2018",
+      polls: [
         {
           "id": 9,
           "text": "question!",
@@ -877,8 +879,9 @@ Example:
           "type": "MULTIPLE_CHOICE",
           "answer": null
         }
-    ]
-  }
+      ]
+    }
+  ]
 }
 ```
 {% endapi-method-response-example %}
