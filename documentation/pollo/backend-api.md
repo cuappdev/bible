@@ -28,7 +28,10 @@ Generate a group code
 
 ```javascript
 {
-    code: string
+    success: true,
+    data: {
+        code: string
+    }
 }
 ```
 {% endapi-method-response-example %}
@@ -74,8 +77,11 @@ Get all drafts for a user
 
 {% endapi-method-response-example-description %}
 
-```
-Edges<Draft>
+```javascript
+{
+    success: true,
+    data: Edges<Draft>
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -116,8 +122,11 @@ string\[\]
 
 {% endapi-method-response-example-description %}
 
-```
-Node<Draft>
+```javascript
+{
+    success: true,
+    data: Node<Draft>
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -164,8 +173,11 @@ string\[\]
 
 {% endapi-method-response-example-description %}
 
-```
-Node<Draft>
+```javascript
+{
+    success: true,
+    data: Node<Draft>
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -202,8 +214,11 @@ Delete a draft
 
 {% endapi-method-response-example-description %}
 
-```
-{}
+```javascript
+{
+    success: true,
+    data: null
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -258,8 +273,11 @@ Create a group
 
 {% endapi-method-response-example-description %}
 
-```
-Node<Group>
+```javascript
+{
+    success: true,
+    data: Node<Group>
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -296,8 +314,11 @@ Get a group
 
 {% endapi-method-response-example-description %}
 
-```
-Node<Group>
+```javascript
+{
+    success: true,
+    data: Node<Group>
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -334,8 +355,11 @@ If role is `member`, this will return all groups you are in. If role is `admin`,
 
 {% endapi-method-response-example-description %}
 
-```
-Edges<Group>
+```javascript
+{
+    success: true,
+    data: Edges<Group>
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -382,8 +406,11 @@ Update a group
 
 {% endapi-method-response-example-description %}
 
-```
-Node<Group>
+```javascript
+{
+    success: true,
+    data: Node<Group>
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -420,8 +447,11 @@ Delete a group
 
 {% endapi-method-response-example-description %}
 
-```
-{}
+```javascript
+{
+    success: true,
+    data: null
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -458,8 +488,11 @@ Leave a group
 
 {% endapi-method-response-example-description %}
 
-```
-{}
+```javascript
+{
+    success: true,
+    data: null
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -496,8 +529,11 @@ Get members
 
 {% endapi-method-response-example-description %}
 
-```
-Edges<User>
+```javascript
+{
+    success: true,
+    data: Edges<User>
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -534,8 +570,11 @@ Get admins
 
 {% endapi-method-response-example-description %}
 
-```
-Edges<User>
+```javascript
+{
+    success: true,
+    data: Edges<User>
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -578,8 +617,11 @@ int\[\]
 
 {% endapi-method-response-example-description %}
 
-```
-{}
+```javascript
+{
+    success: true,
+    data: null
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -622,8 +664,11 @@ int\[\]
 
 {% endapi-method-response-example-description %}
 
-```
-{}
+```javascript
+{
+    success: true,
+    data: null
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -666,8 +711,11 @@ int\[\]
 
 {% endapi-method-response-example-description %}
 
-```
-{}
+```javascript
+{
+    success: true,
+    data: null
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -710,8 +758,11 @@ int\[\]
 
 {% endapi-method-response-example-description %}
 
-```
-{}
+```javascript
+{
+    success: true,
+    data: null
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -721,7 +772,6 @@ int\[\]
 ## Polls
 
 ```text
-
 type Poll {
   id: number,
   text: string,
@@ -787,8 +837,11 @@ json
 
 {% endapi-method-response-example-description %}
 
-```
-Node<Poll>
+```javascript
+{
+    success: true,
+    data: Node<Poll>
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -825,8 +878,11 @@ Get a poll
 
 {% endapi-method-response-example-description %}
 
-```
-Node<Poll>
+```javascript
+{
+    success: true,
+    data: Node<Poll>
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -863,8 +919,7 @@ Get all polls for a group sorted by date
 A dictionary with dates mapped to a list of polls
 {% endapi-method-response-example-description %}
 
-```
-Example: 
+```javascript
 {
   success: true,
   data: [ 
@@ -933,8 +988,11 @@ Update a poll
 The updated poll
 {% endapi-method-response-example-description %}
 
-```
-Node<Poll>
+```javascript
+{
+    success: true,
+    data: Node<Poll>
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -971,8 +1029,11 @@ Delete a poll
 
 {% endapi-method-response-example-description %}
 
-```
-{}
+```javascript
+{
+    success: true,
+    data: null
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -1013,8 +1074,11 @@ Get me
 
 {% endapi-method-response-example-description %}
 
-```
-Node<User>
+```javascript
+{
+    success: true,
+    data: Node<User>
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -1056,8 +1120,11 @@ Authenticate mobile
 
 {% endapi-method-response-example-description %}
 
-```
-Node<UserSession>
+```javascript
+{
+    success: true,
+    data: Node<UserSession>
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -1088,8 +1155,11 @@ Refresh session
 
 {% endapi-method-response-example-description %}
 
-```
-Node<UserSession>
+```javascript
+{
+    success: true,
+    data: Node<UserSession>
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
