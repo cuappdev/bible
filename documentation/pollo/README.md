@@ -1,4 +1,6 @@
-# Pollo
+---
+description: Documentation for Pollo
+---
 
-Coming soon.
+# Pollo
 
