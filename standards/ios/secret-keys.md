@@ -72,9 +72,9 @@ $PODS_ROOT/Sourcery/bin/sourcery --sources . --templates Sourcery/keys.stencil -
 On the last line you see ... --args random="pollo". This was added because without this line, Sourcery was not properly passing our arguments to keys.generated.swift
 {% endhint %}
 
-The run script needs to be above `Compile Sources`
+The run script needs to be above `Compile Sources` because the newly generated `keys.generated.swift` file needs to exist so it gets compiled when building the app
 
-![Notice how Secrets Run Script is above Compile Sources](../../.gitbook/assets/image%20%284%29.png)
+![Notice how Secrets Run Script is above Compile Sources. You can just drag sections around to order them.](../../.gitbook/assets/image%20%284%29.png)
 
 We need to modify the input and output files for the Run Script. Copy the following from the screenshot. Notice the Input Files and Output Files section.
 
