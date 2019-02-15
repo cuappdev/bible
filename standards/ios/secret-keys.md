@@ -68,6 +68,10 @@ fi
 $PODS_ROOT/Sourcery/bin/sourcery --sources . --templates Sourcery/keys.stencil --output Secrets --args random="pollo",apiURL=$API_URL,apiDevURL=$API_DEV_URL,fabricAPIKey=$FABRIC_API_KEY,fabricBuildSecret=$FABRIC_BUILD_SECRET
 ```
 
+{% hint style="info" %}
+On the last line you see ... --args random="pollo". This was added because without this line, Sourcery was not properly passing our arguments to keys.generated.swift
+{% endhint %}
+
 The run script needs to be above `Compile Sources`
 
 ![Notice how Secrets Run Script is above Compile Sources](../../.gitbook/assets/image%20%284%29.png)
