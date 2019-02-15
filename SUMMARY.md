@@ -20,6 +20,7 @@
   * [Table Views](standards/ios/tableviews.md)
   * [Pull Request Reviews](standards/ios/pull-request-reviews.md)
   * [Secret Keys](standards/ios/secret-keys.md)
+  * [Continuous Integration](standards/ios/continuous-integration.md)
 * [Android](standards/android/README.md)
   * [Pull Request Reviews](standards/android/pull-request-reviews.md)
 * [Backend](standards/backend/README.md)
