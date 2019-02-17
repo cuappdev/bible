@@ -159,8 +159,28 @@ id for a specific collegetown eatery.  No argument will default to a get all req
   
 {  
     collegetownEateries\(id: &lt;eatery\_id&gt;\) {  
+        address          
+        categories  
+        coordinates {  
+            latitude  
+            longitude  
+        }  
+        eateryType  
         id  
+        imageUrl  
         name  
+        paymentMethods {  
+            brbs  
+            cash  
+            cornellCard  
+            credit  
+            mobile  
+            swipes  
+        }  
+        phone  
+        price  
+        rating  
+        url  
     }  
 }
 {% endapi-method-parameter %}
