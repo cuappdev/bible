@@ -59,3 +59,5 @@ We'll also have miscellaneous labels can be used to describe additional aspects 
 | Note: Good First Issue | For issues that will help new members onboard |  |
 | Note: Duplicate | For issues that already exists |  |
 
+Creating these labels for new repositories can be tedious, since GitHub does not have a feature for copying labels at this time. [This CLI tool](https://github.com/jvandemo/copy-github-labels-cli) is convienient for copying labels and described how to use it. 
+
