@@ -56,7 +56,7 @@ Some standardization rules:
 ### Merging
 
 ```bash
-git checout master
+git checkout master
 git pull
 git checkout [your-name]/[feature]
 git merge master # merges master into your branch
