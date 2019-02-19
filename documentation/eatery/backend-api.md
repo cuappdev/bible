@@ -270,6 +270,7 @@ GET session id for a user.
         brb  
         cityBucks  
         history {  
+            amount  
             name  
             timestamp  
         }  
@@ -295,15 +296,18 @@ GET session id for a user.
       "cityBucks": "0.00",
       "history": [
         {
-          "name": "Duffield <register_number>",
+          "amount": "6.99"
+          "name": "Duffield",
           "timestamp": "12/05/18 at 02:24 PM"
         },
         {
-          "name": "Jansens Market <register_number>",
+          "amount": "3.49"
+          "name": "Jansens Market",
           "timestamp": "12/02/18 at 11:57 PM"
         },
         {
-          "name": "Jansens Market <register_number>",
+          "amount": "6.49"
+          "name": "Goldies Cafe",
           "timestamp": "12/02/18 at 09:33 PM"
         }
         ...  # more history
