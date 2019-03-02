@@ -1199,20 +1199,23 @@ group id
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
-A dictionary of dates to questions
+An array of objects with a date and the date's questions
 {% endapi-method-response-example-description %}
 
 ```javascript
 {
-    success: true,
-    data: {
-        "Jan 01 2019": [ 
-            {
-                id: string,
-                text: string
-            }
-        ]
+  success: true,
+  data: [
+    {
+      date: "Jan 01 2019",
+      questions: [
+        {
+          id: string,
+          text: string
+        }
+      ]
     }
+  ]
 }
 ```
 {% endapi-method-response-example %}
