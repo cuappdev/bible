@@ -33,5 +33,5 @@ The course staff has made a compilation of handouts summarizing the main ideas a
 
 ## Contacts & Help
 
-For any questions regarding the course, please email one of the two instructors: Mindy Lou \(**mml234@cornell.edu**\) or Kevin Chan \(**kc626@cornell.edu**\).
+For any questions regarding the course, please email **cornellappdev@gmail.com** with "Intro to iOS Course" in the subject title.
 
