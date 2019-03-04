@@ -891,7 +891,7 @@ Get a poll
 
 {% api-method method="get" host="http://pollo-backend.cornellappdev.com" path="/api/v2/sessions/:id/polls/" %}
 {% api-method-summary %}
-Get all polls for a group sorted by date
+Get all polls for a group sorted by date \(newest first\)
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -1367,6 +1367,10 @@ type UserSession {
 }
 ```
 
+{% hint style="info" %}
+If invalid `accessToken` is passed into request header, `401 error` is thrown.
+{% endhint %}
+
 {% api-method method="post" host="http://pollo-backend.cornellappdev.com" path="/api/v2/auth/mobile" %}
 {% api-method-summary %}
 Authenticate mobile
@@ -1506,6 +1510,20 @@ Disconnect \(default socket\)
       </td>
       <td style="text-align:left">User sends to upvote an answer</td>
     </tr>
+    <tr>
+      <td style="text-align:left"><code>server/poll/delete</code>
+      </td>
+      <td style="text-align:left"><code>pollID</code>
+      </td>
+      <td style="text-align:left">Admin sends to delete saved poll</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>server/poll/deleteLive</code>
+      </td>
+      <td style="text-align:left"><em>empty</em>
+      </td>
+      <td style="text-align:left">Admin sends to delete live poll</td>
+    </tr>
   </tbody>
 </table>#### To Student
 
@@ -1516,6 +1534,8 @@ Disconnect \(default socket\)
 | `user/poll/results/` | `CurrentState` object | User receives when if admin decides to share results |
 | `user/poll/results/live` | `CurrentState` object | User receives when there is a live FR question when user first joins socket |
 | `user/count` | { count: `user count` } | User receives number of live users in socket |
+| `user/poll/delete` | `pollID` | User receives when poll is deleted |
+| `user/poll/deleteLive` | _empty_ | User receives when live poll is deleted |
 
 #### To Admin
 
