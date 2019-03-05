@@ -1513,8 +1513,7 @@ Disconnect \(default socket\)
     <tr>
       <td style="text-align:left"><code>server/poll/delete</code>
       </td>
-      <td style="text-align:left"><code>pollID</code>
-      </td>
+      <td style="text-align:left"><code>pollID</code> *same as db ID</td>
       <td style="text-align:left">Admin sends to delete saved poll</td>
     </tr>
     <tr>
@@ -1534,8 +1533,10 @@ Disconnect \(default socket\)
 | `user/poll/results/` | `CurrentState` object | User receives when if admin decides to share results |
 | `user/poll/results/live` | `CurrentState` object | User receives when there is a live FR question when user first joins socket |
 | `user/count` | { count: `user count` } | User receives number of live users in socket |
-| `user/poll/delete` | `pollID` | User receives when poll is deleted |
+| `user/poll/delete` | `pollID` \*same as db ID | User receives when poll is deleted |
 | `user/poll/deleteLive` | _empty_ | User receives when live poll is deleted |
+| `user/answer/success` | _empty_ | User receives when FR answer is successfully registered \(pass filter\) |
+| `user/answer/filter` | { text: `string`, filter: `string array` } | User receives when FR answer is _not_  registered \(doesn't pass filter\) |
 
 #### To Admin
 
