@@ -44,6 +44,7 @@ Generate a group code
 ```javascript
 type Draft {
     id: number,
+    createdAt?: number,
     text: string,
     options: string[]
 }
@@ -80,7 +81,7 @@ Get all drafts for a user
 ```javascript
 {
     success: true,
-    data: Edges<Draft>
+    data: List<Draft>
 }
 ```
 {% endapi-method-response-example %}
@@ -125,7 +126,7 @@ string\[\]
 ```javascript
 {
     success: true,
-    data: Node<Draft>
+    data: <Draft>
 }
 ```
 {% endapi-method-response-example %}
@@ -176,7 +177,7 @@ string\[\]
 ```javascript
 {
     success: true,
-    data: Node<Draft>
+    data: <Draft>
 }
 ```
 {% endapi-method-response-example %}
@@ -231,7 +232,9 @@ Delete a draft
 type Group {
     id: number,
     name: string,
-    code: string
+    code: string,
+    updatedAt: number,
+    isLive: boolean
 }
 ```
 
@@ -276,7 +279,7 @@ Create a group
 ```javascript
 {
     success: true,
-    data: Node<Group>
+    data: <Group>
 }
 ```
 {% endapi-method-response-example %}
@@ -317,7 +320,7 @@ Get a group
 ```javascript
 {
     success: true,
-    data: Node<Group>
+    data: <Group>
 }
 ```
 {% endapi-method-response-example %}
@@ -358,7 +361,7 @@ If role is `member`, this will return all groups you are in. If role is `admin`,
 ```javascript
 {
     success: true,
-    data: Edges<Group>
+    data: List<Group>
 }
 ```
 {% endapi-method-response-example %}
@@ -409,7 +412,7 @@ Update a group
 ```javascript
 {
     success: true,
-    data: Node<Group>
+    data: <Group>
 }
 ```
 {% endapi-method-response-example %}
@@ -532,7 +535,7 @@ Get members
 ```javascript
 {
     success: true,
-    data: Edges<User>
+    data: List<User>
 }
 ```
 {% endapi-method-response-example %}
@@ -573,7 +576,7 @@ Get admins
 ```javascript
 {
     success: true,
-    data: Edges<User>
+    data: List<User>
 }
 ```
 {% endapi-method-response-example %}
@@ -840,7 +843,7 @@ json
 ```javascript
 {
     success: true,
-    data: Node<Poll>
+    data: <Poll>
 }
 ```
 {% endapi-method-response-example %}
@@ -881,7 +884,7 @@ Get a poll
 ```javascript
 {
     success: true,
-    data: Node<Poll>
+    data: <Poll>
 }
 ```
 {% endapi-method-response-example %}
@@ -991,7 +994,7 @@ The updated poll
 ```javascript
 {
     success: true,
-    data: Node<Poll>
+    data: <Poll>
 }
 ```
 {% endapi-method-response-example %}
@@ -1045,6 +1048,7 @@ Delete a poll
 ```text
 type Question {
     id: number,
+    createdAt?: number,
     text: string
 }
 ```
@@ -1082,7 +1086,7 @@ group id
 ```javascript
 {
     success: true,
-    data: Node<Question>
+    data: <Question>
 }
 ```
 {% endapi-method-response-example %}
@@ -1123,7 +1127,7 @@ question id
 ```javascript
 {
     success: true,
-    data: Node<Question>
+    data: <Question>
 }
 ```
 {% endapi-method-response-example %}
@@ -1164,7 +1168,7 @@ group id
 ```javascript
 {
     success: true,
-    data: Edges<Question>
+    data: List<Question>
 }
 ```
 {% endapi-method-response-example %}
@@ -1262,7 +1266,7 @@ The updated question
 ```javascript
 {
     success: true,
-    data: Node<Question>
+    data: <Question>
 }
 ```
 {% endapi-method-response-example %}
@@ -1348,7 +1352,7 @@ Get me
 ```javascript
 {
     success: true,
-    data: Node<User>
+    data: <User>
 }
 ```
 {% endapi-method-response-example %}
@@ -1398,7 +1402,7 @@ Authenticate mobile
 ```javascript
 {
     success: true,
-    data: Node<UserSession>
+    data: <UserSession>
 }
 ```
 {% endapi-method-response-example %}
@@ -1433,7 +1437,7 @@ Refresh session
 ```javascript
 {
     success: true,
-    data: Node<UserSession>
+    data:<UserSession>
 }
 ```
 {% endapi-method-response-example %}
@@ -1616,142 +1620,6 @@ options = ['Blue', 'Red', 'Green', '']
 {% hint style="info" %}
 `Poll` is saved into the database after admin ends poll.
 {% endhint %}
-
-## Other
-
-### Nodes
-
-All objects fetched from the API are returned in a standard "node" object type.This is to future-proof the API, and allow metadata, warnings, errors or other information to be returned alongside the requested resource.
-
-#### URL
-
-URLs for nodes consist of a 'collection type' and an id. For example, to retrieve a poll, one would call:
-
-```http
-GET /polls/${id}
-```
-
-#### Node Return Type
-
-All nodes return an object in the same format. If requesting an object of `type T`, the response would be of type: 
-
-```javascript
-NodeResponse<T> = {
-  success: boolean,
-  data: {
-    node: T,
-  },
-  errors?: Array<Error>
-}
-```
-
-So, for example, retrieving a poll would yield an object like this:
-
-```javascript
-{
-  "success": true,
-  "data": {
-    "node": {
-      "id": 1,
-      "name": "cool",
-      "code": "ABC123"
-    }
-  }
-}
-```
-
-### Edges
-
-Relations between entities are connected by paginated edges, following a common scheme. The edge connection is retrieved independently of the source object following common patterns.
-
-#### URL
-
-URLs for connections are made from a node, which is fetched with a 'collection type' and an id. For example, to retrieve a group, one would call:
-
-```http
-GET /polls/${id}
-```
-
-Questions have a connection to polls. From this node, we can fetch said connection \(seen below\), which would return a connection return object.
-
-```http
-GET /polls/${id}/questions/
-```
-
-#### Connection Return Type
-
-All paginated routes return an object in the same format. If requesting a list of elements of `type T`, the response would be of type:
-
-```javascript
-EdgeResponse<T> = {
-  success: boolean,
-  data: {
-    edges: Array<Edge<T>>,
-    pageInfo?: {
-      count: number,
-    }
-  },
-  errors?: Array<Error>
-}
-```
-
-For 'edges' of type:
-
-```javascript
-Edge = {
-  cursor: cursor,
-  node: T
-}
-```
-
-where the type of cursor is as follows:
-
-```javascript
-cursor = number | string
-```
-
-{% hint style="info" %}
-Numbers and strings are both allowed. Cursor should be mostly opaque and just used when sending requests.
-{% endhint %}
-
-So fetching all questions for a poll would yield something similar to:
-
-```javascript
-{
-  edges: [
-    {
-      cursor: '1506730644751',
-      node: {
-        id: 0,
-        text: 'question 1',
-        results: {}
-      }
-    },
-    {
-      cursor: '1506730707264',
-      node: {
-        id: 1,
-        text: 'question 2',
-        results: {}
-      }
-    }
-  ]
-}
-```
-
-#### One-liners for common operations
-
-Extracting the nodes is easy using:
-
-```javascript
-const getNodes = (result: Response) => result.edges.map(({ node }) => node);
-```
-
-Extracting the last cursor can be done with:
-
-```javascript
-const lastCursor = (result: Response) => result.edges.map(({ cursor }) => cursor).pop();
-```
 
 
 
