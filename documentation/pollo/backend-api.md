@@ -919,7 +919,7 @@ Get all polls for a group sorted by date \(newest first\)
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
-An array of objects with a date and the date's polls
+An array of objects with a date \(Unix time\) and the date's polls
 {% endapi-method-response-example-description %}
 
 ```javascript
@@ -927,7 +927,7 @@ An array of objects with a date and the date's polls
   success: true,
   data: [ 
     {
-      date: "Sep 27 2018",
+      date: "1551846479",
       polls: [
         {
           "id": 9,
@@ -1203,7 +1203,7 @@ group id
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
-An array of objects with a date and the date's questions
+An array of objects with a date \(Unix time\) and the date's questions
 {% endapi-method-response-example-description %}
 
 ```javascript
@@ -1211,7 +1211,7 @@ An array of objects with a date and the date's questions
   success: true,
   data: [
     {
-      date: "Jan 01 2019",
+      date: "1551846479",
       questions: [
         {
           id: string,
@@ -1451,7 +1451,7 @@ Built with Socket.io. [Documentation found here.](https://socket.io/docs/)
 
 ### Socket Connection
 
-Connect \(default socket\) Make sure to visit `/start/group/` before joining a socket because this will create the socket if not created yet. Need to emit `userType` and `googleID` on connect.  
+Connect \(default socket\) Make sure to visit `/start/session/` before joining a socket because this will create the socket if not created yet. Need to emit `userType` and `googleID` on connect.  
   
 Disconnect \(default socket\)
 
@@ -1461,8 +1461,8 @@ Disconnect \(default socket\)
 
 | Method | Body | URL | Response | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| POST | `code: string` and `name?: string` | `/start/group/` | `Group` - The group that was created, use `id` as a namespace | User sends to start a group |
-| POST | `id: number` or `code: string` | `/join/group/` | `Group` | User sends to join a group |
+| POST | `code: string` and `name?: string` | `/start/session/` | `Group` - The group that was created, use `id` as a namespace | User sends to start a group |
+| POST | `id: number` or `code: string` | `/join/session/` | `Group` | User sends to join a group |
 
 ### Socket
 
