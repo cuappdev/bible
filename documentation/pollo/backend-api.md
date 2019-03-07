@@ -935,7 +935,7 @@ An array of objects with a date \(Unix time\) and the date's polls
           "results": {},
           "shared": true,
           "type": "MULTIPLE_CHOICE",
-          "answer": null
+          "answer": ["A"]
         }
       ]
     }
