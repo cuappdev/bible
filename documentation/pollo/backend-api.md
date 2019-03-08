@@ -1451,7 +1451,7 @@ Built with Socket.io. [Documentation found here.](https://socket.io/docs/)
 
 ### Socket Connection
 
-**Connect** \(default socket\) Make sure to visit `/start/session/` before joining a socket because this will create the socket if not created yet. You will need to emit `userType`  on connect to socket.  
+**Connect** \(default socket\) Make sure to visit `/join/session/` before joining a socket because this will create the socket if not created yet. You will need to emit `userType`  on connect to socket.  
   
 **Disconnect** \(default socket\)
 
