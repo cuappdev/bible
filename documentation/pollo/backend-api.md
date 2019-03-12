@@ -894,11 +894,12 @@ Get a poll
 
 {% api-method method="get" host="http://pollo-backend.cornellappdev.com" path="/api/v2/sessions/:id/polls/" %}
 {% api-method-summary %}
-Get all polls for a group sorted by date \(newest first\)
+Get all polls for a group sorted by date \(ascending\)
 {% endapi-method-summary %}
 
 {% api-method-description %}
-
+Admin user will receive all polls  
+Member user will receive all polls but with poll results hidden \(set to `{}`\) if poll is unshared
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -1178,7 +1179,7 @@ group id
 
 {% api-method method="get" host="http://pollo-backend.cornellappdev.com" path="/api/v2/sessions/:id/questions/date/" %}
 {% api-method-summary %}
-Get all questions for a group sorted by date
+Get all questions for a group sorted by date \(ascending\)
 {% endapi-method-summary %}
 
 {% api-method-description %}
