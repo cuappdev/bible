@@ -1076,6 +1076,12 @@ group id
 `'Bearer ' + accessToken`
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
+
+{% api-method-body-parameters %}
+{% api-method-parameter name="text" type="string" required=true %}
+
+{% endapi-method-parameter %}
+{% endapi-method-body-parameters %}
 {% endapi-method-request %}
 
 {% api-method-response %}
@@ -1252,7 +1258,7 @@ question id
 {% endapi-method-headers %}
 
 {% api-method-body-parameters %}
-{% api-method-parameter name="text" type="string" required=false %}
+{% api-method-parameter name="text" type="string" required=true %}
 
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
