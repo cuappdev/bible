@@ -1,5 +1,5 @@
 ---
-description: 'if you''re thirsty for some kool-aid, you''re at the right place.'
+description: IGListKit Guide
 ---
 
 # IGListKit
