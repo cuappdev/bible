@@ -25,6 +25,8 @@ Currently, we have two apps whose UI heavily depends on IGListKit, specifically 
 
 ## Data-Driven UICollectionView
 
+![Credits: raywenderlich.com](../../../.gitbook/assets/flowchart-650x357.png)
+
 Any UICollectionView that you create using IGListKit is inherently _data-driven_. Why? This is because every IGListKit collection view needs to have an associated array of models that conform to the **ListDiffable** protocol. Lets get a bit more specific:
 
 For each collection view, you will have to create a **ListAdapter** object. This adapter object will then using the array of **ListDiffable** models you provide and create a **ListSectionController** for each one. A ListSectionController is an object that manages and represents a **section** of your collection view. Specifically, it acts as the data source and delegate for that section. Inside every ListSectionController, you can specify the number, the type, and configuration of cells that you want for this section. This means that we have the power to decide how many cells we want each model to correspond to.
