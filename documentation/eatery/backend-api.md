@@ -45,22 +45,30 @@ example query
                 menu {  
                     itemCount  
                     items {  
-                         healthy  
-                         item  
+                        healthy  
+                        item  
                     }   
                 }   
             }   
         }   
         paymentMethods {   
-             brbs  
-             cash  
-             cornellCard  
-             credit  
-             mobile  
-             swipes  
+            brbs  
+            cash  
+            cornellCard  
+            credit  
+            mobile  
+            swipes  
         }   
         phone  
-        slug  
+        slug
+        swipeData {
+            sessionType
+            startTime
+            endTime
+            swipeDensity
+            waitTimeLow
+            waitTimeHigh
+        }
     }  
 }
 {% endapi-method-parameter %}
@@ -129,6 +137,13 @@ example query
         },
         "phone": "607-272-6907",
         "slug": "104-West"
+        "swipeData": {
+          "sessionType": "regular",
+          "startTime": "04:30 PM",
+          "endTime": "05:00 PM",
+          "swipeDensity": .767,  # 3 decimal number in range [0,1]
+          "waitTimeLow": 1,  # min value is 0
+          "waitTimeHigh": 4
       },
       ...  # more eateries
     ]
@@ -297,23 +312,23 @@ GET session id for a user.
       "history": [
         {
           "amount": "6.99"
-          "name": "Duffield",
-          "timestamp": "12/05/18 at 02:24 PM"
+          "name": "Mattin's Café",
+          "timestamp": "Wednesday, Dec 05 at 02:24 PM"
         },
         {
           "amount": "3.49"
-          "name": "Jansens Market",
-          "timestamp": "12/02/18 at 11:57 PM"
+          "name": "Jansen's Market",
+          "timestamp": "Tuesday, Dec 04 at 11:57 PM"
         },
         {
           "amount": "6.49"
-          "name": "Goldies Cafe",
-          "timestamp": "12/02/18 at 09:33 PM"
+          "name": "Goldie's Café",
+          "timestamp": "Monday, Nov 28 at 09:33 PM"
         }
         ...  # more history
       ],
       "laundry": "3.05",
-      "swipes": ""  # empty string means unlimited swipes
+      "swipes": "9"  # empty string means unlimited swipes
     }
   }
 }
