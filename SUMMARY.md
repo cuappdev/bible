@@ -6,6 +6,7 @@
 
 * [Git](standards/git/README.md)
   * [Git Issues](standards/git/git-issues.md)
+  * [Advanced Git](standards/git/advanced-git.md)
 * [iOS](standards/ios/README.md)
   * [Xcode](standards/ios/xcode.md)
   * [Language](standards/ios/language.md)
