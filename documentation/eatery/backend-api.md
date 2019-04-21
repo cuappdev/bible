@@ -19,57 +19,53 @@ Get all campus eateries
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="GraphQL Query" type="integer" required=false %}
-id for a specific eatery.  No argument will result in a get all request  
-  
-example query  
-  
-{   
-    campusEateries {   
-        about   
-        coordinates {   
-            latitude   
-            longitude   
-        }   
-        eateryType   
-        id  
-        imageUrl  
-        location  
-        name  
-        operatingHours {  
-            date   
-            events {  
-                calSummary  
-                description  
-                startTime  
-                endTime  
-                menu {  
-                    itemCount  
-                    items {  
-                        healthy  
-                        item  
-                    }   
-                }   
-            }   
-        }   
-        paymentMethods {   
-            brbs  
-            cash  
-            cornellCard  
-            credit  
-            mobile  
-            swipes  
-        }   
-        phone  
-        slug
-        swipeData {
-            sessionType
-            startTime
-            endTime
-            swipeDensity
-            waitTimeLow
-            waitTimeHigh
-        }
+id for a specific eatery. No argument will result in a get all request  
+example query{  
+  campusEateries {  
+    about  
+    coordinates {  
+      latitude  
+      longitude  
     }  
+    eateryType  
+    id  
+    imageUrl  
+    location  
+    name  
+    operatingHours {  
+      date  
+      events {  
+        calSummary  
+        description  
+        startTime  
+        endTime  
+        menu {  
+          itemCount  
+          items {  
+            healthy  
+            item  
+          }  
+        }  
+      }  
+    }  
+    paymentMethods {  
+      brbs  
+      cash  
+      cornellCard  
+      credit  
+      mobile  
+      swipes  
+    }  
+    phone  
+    slug   
+    swipeData {   
+      startTime   
+      endTime   
+      swipeDensity    
+      waitTimeLow   
+      waitTimeHigh   
+    }   
+  }  
 }
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
@@ -81,7 +77,7 @@ example query
 
 {% endapi-method-response-example-description %}
 
-```
+```text
 {
   "data": {
     "campusEateries": [
@@ -170,33 +166,31 @@ Get all collegetown eateries
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="GraphQL Query" type="integer" required=false %}
-id for a specific collegetown eatery.  No argument will default to a get all request.  
-  
-{  
-    collegetownEateries\(id: &lt;eatery\_id&gt;\) {  
-        address          
-        categories  
-        coordinates {  
-            latitude  
-            longitude  
-        }  
-        eateryType  
-        id  
-        imageUrl  
-        name  
-        paymentMethods {  
-            brbs  
-            cash  
-            cornellCard  
-            credit  
-            mobile  
-            swipes  
-        }  
-        phone  
-        price  
-        rating  
-        url  
-    }  
+id for a specific collegetown eatery. No argument will default to a get all request.{  
+collegetownEateries\(id: &lt;eatery\_id&gt;\) {  
+address  
+categories  
+coordinates {  
+latitude  
+longitude  
+}  
+eateryType  
+id  
+imageUrl  
+name  
+paymentMethods {  
+brbs  
+cash  
+cornellCard  
+credit  
+mobile  
+swipes  
+}  
+phone  
+price  
+rating  
+url  
+}  
 }
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
@@ -208,7 +202,7 @@ id for a specific collegetown eatery.  No argument will default to a get all req
 
 {% endapi-method-response-example-description %}
 
-```
+```text
 {
   "data": {
     "collegetownEateries": [
@@ -278,20 +272,18 @@ Gathers user account information from GET \(laundry, brb, city bucks\)
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="GraphQL Query" type="string" required=true %}
-GET session id for a user.  
-  
-{  
-    accountInfo\(id: &lt;session\_id&gt;\) {  
-        brb  
-        cityBucks  
-        history {  
-            amount  
-            name  
-            timestamp  
-        }  
-        laundry  
-        swipes  
-    }  
+GET session id for a user.{  
+accountInfo\(id: &lt;session\_id&gt;\) {  
+brb  
+cityBucks  
+history {  
+amount  
+name  
+timestamp  
+}  
+laundry  
+swipes  
+}  
 }
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
@@ -303,7 +295,7 @@ GET session id for a user.
 
 {% endapi-method-response-example-description %}
 
-```
+```text
 {
   "data": {
     "accountInfo": {
