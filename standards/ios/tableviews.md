@@ -113,7 +113,7 @@ class SearchResultsViewController: UIViewController {
             }
         }
 
-        switchitemType {
+        switch itemType {
             case .busStop(let busStopModel):
                 let cell = tableView.dequeue... as! BusStopCell
                 //do set up
