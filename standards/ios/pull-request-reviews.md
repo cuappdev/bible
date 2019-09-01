@@ -1,4 +1,4 @@
-# Pull Request Reviews
+# Reviewing a Pull Request
 
 The purpose of a pull request is to ensure the code to be merged in is:
 
