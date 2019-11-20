@@ -86,8 +86,7 @@ We can use Eatery as an example and create an endpoint to fetch all eateries and
 
 It would look something like this.
 
-{% code-tabs %}
-{% code-tabs-item title="EateryEndpoints.swift" %}
+{% code title="EateryEndpoints.swift" %}
 ```swift
 
 extension Endpoint {
@@ -106,8 +105,7 @@ extension Endpoint {
 }
 
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 \(I think grouping relative endpoints is fine within files. Here I have all Eatery Endpoints. If there were endpoints to get specific Menus, we might put it in a `MenuEndpoints.swift` file\)
 

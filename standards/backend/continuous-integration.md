@@ -18,28 +18,24 @@ HoundCI serves as a way for code to be linted when a pull request is created. Ho
 
 Rules are defined in a `.hound.yml` file at the root of the repository, and a sample one might look like:
 
-{% code-tabs %}
-{% code-tabs-item title=".hound.yml" %}
+{% code title=".hound.yml" %}
 ```yaml
 flake8:
   enabled: true
   config_file: .flake8.ini
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 The above one tells HoundCI to lint using `flake8` \(a `python` linter\) and points to `.flake8.ini` as the configuration file.
 
-{% code-tabs %}
-{% code-tabs-item title=".flake8.ini" %}
+{% code title=".flake8.ini" %}
 ```text
 [flake8]
 ignore = E111,E114,E302
 exclude = .git,__pycache__,venv
 max-line-length = 100
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 To configure HoundCI for a repository, the Backend Lead should enable it [here](http://houndci.com), and once it is enabled, HoundCI will begin running checks as long as a `.hound.yml` file exists.
 
@@ -49,8 +45,7 @@ TravisCI is primarily used on AppDev as a way of running unit tests in a given r
 
 TravisCI allows us to automate this by running tests based on a `.travis.yml` file at the root of the repository. A sample one for [pollo-backend](https://github.com/cuappdev/pollo-backend) is below:
 
-{% code-tabs %}
-{% code-tabs-item title=".travis.yml" %}
+{% code title=".travis.yml" %}
 ```yaml
 language: node_js
 sudo: required
@@ -70,8 +65,7 @@ script:
     - npm run start &
     - sleep 10; npm run test
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 TravisCI can also run more complex scripts, and we also use TravisCI to push Docker images for deployment.
 

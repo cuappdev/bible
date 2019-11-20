@@ -18,16 +18,14 @@ We might be used to storing our secret in a plist file. There are a couple reaso
 
 We should be storing our secrets in a `env-vars.sh` file.
 
-{% code-tabs %}
-{% code-tabs-item title="env-vars.sh" %}
+{% code title="env-vars.sh" %}
 ```bash
 export API_URL=http://prod.cornellappdev.com
 export API_DEV_URL=localhost:3000
 export FABRIC_API_KEY=123
 export FABRIC_BUILD_SECRET=456
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 We add this to our root directory of the project and make sure we add it to our `.gitignore`
 
