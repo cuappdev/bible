@@ -43,7 +43,3 @@
 * [Eatery](documentation/eatery/README.md)
   * [Backend API](documentation/eatery/backend-api.md)
 
-## Courses
-
-* [Intro to iOS Programming](courses/intro-to-ios-programming.md)
-
