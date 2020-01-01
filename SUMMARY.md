@@ -5,6 +5,7 @@
 ## Standards
 
 * [Git](standards/git/README.md)
+  * [Introduction](standards/git/intro.md)
   * [Git Issues](standards/git/git-issues.md)
   * [Advanced Git](standards/git/advanced-git.md)
 * [iOS](standards/ios/README.md)
@@ -35,11 +36,9 @@
   * [JavaScript](standards/web/javascript.md)
   * [Python](standards/web/python.md)
 
-## Documentation
+## API Specifications <a id="api"></a>
 
-* [Uplift](documentation/uplift.md)
-* [Pollo](documentation/pollo/README.md)
-  * [Backend API](documentation/pollo/backend-api.md)
-* [Eatery](documentation/eatery/README.md)
-  * [Backend API](documentation/eatery/backend-api.md)
+* [Uplift](api/uplift.md)
+* [Pollo](api/pollo.md)
+* [Eatery](api/eatery.md)
 

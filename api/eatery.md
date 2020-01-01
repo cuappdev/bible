@@ -1,8 +1,8 @@
 ---
-description: This endpoint takes GraphQL queries and returns data as a JSON.
+description: API Documentation for Eatery
 ---
 
-# Backend API
+# Eatery
 
 ## Campus Eateries
 
@@ -295,35 +295,8 @@ swipes
 
 {% endapi-method-response-example-description %}
 
-```text
-{
-  "data": {
-    "accountInfo": {
-      "brbs": "22.67",
-      "cityBucks": "0.00",
-      "history": [
-        {
-          "amount": "6.99"
-          "name": "Mattin's Café",
-          "timestamp": "Wednesday, Dec 05 at 02:24 PM"
-        },
-        {
-          "amount": "3.49"
-          "name": "Jansen's Market",
-          "timestamp": "Tuesday, Dec 04 at 11:57 PM"
-        },
-        {
-          "amount": "6.49"
-          "name": "Goldie's Café",
-          "timestamp": "Monday, Nov 28 at 09:33 PM"
-        }
-        ...  # more history
-      ],
-      "laundry": "3.05",
-      "swipes": "9"  # empty string means unlimited swipes
-    }
-  }
-}
+```
+
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
