@@ -6,6 +6,7 @@
 
 * [Git](standards/git/README.md)
   * [Introduction](standards/git/intro.md)
+  * [Initializing a Repository](standards/git/repo.md)
   * [Git Issues](standards/git/git-issues.md)
   * [Advanced Git](standards/git/advanced-git.md)
 * [iOS](standards/ios/README.md)
@@ -38,7 +39,7 @@
 
 ## API Specifications <a id="api"></a>
 
-* [Uplift](api/uplift.md)
-* [Pollo](api/pollo.md)
-* [Eatery](api/eatery.md)
+* [Uplift](documentation/uplift.md)
+* [Pollo](documentation/pollo/README.md)
+* [Eatery](documentation/eatery/README.md)
 
