@@ -1,4 +1,4 @@
-# Secrets
+# Storing Secret Keys
 
 The recommended method to store secret keys \(ie. Google Map API key\) is through a `properties` file. Here are the steps for creating the file: 
 
