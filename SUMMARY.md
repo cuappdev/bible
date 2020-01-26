@@ -25,6 +25,8 @@
   * [Secret Keys](standards/ios/secret-keys.md)
   * [Continuous Integration](standards/ios/continuous-integration.md)
 * [Android](standards/android/README.md)
+  * [Language](standards/android/language.md)
+  * [Secrets](standards/android/secrets.md)
   * [Pull Request Reviews](standards/android/pull-request-reviews.md)
 * [Backend](standards/backend/README.md)
   * [Continuous Integration](standards/backend/continuous-integration.md)
